@@ -34,6 +34,21 @@ abstract class AbstractModel
         $result = $query->fetch();
         $this->hydrate($result);
     }
+            /**
+     * Method findAll()
+     * To find all element in the database
+     * @param int $id
+     * @return void
+     */
+    public function findAll(): void
+    {
+        $query = $this->pdo->prepare(
+            "SELECT * FROM {$this->table} "
+        );
+        $query->execute();
+        $result = $query->fetchAll();
+        $this->hydrate($result);
+    }
 
     /**
      * Method hydrate()
