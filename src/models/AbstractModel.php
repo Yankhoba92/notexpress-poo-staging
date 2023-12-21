@@ -40,14 +40,14 @@ abstract class AbstractModel
      * @param int $id
      * @return void
      */
-    public function findAll(): void
+    public function findAll(): array
     {
         $query = $this->pdo->prepare(
             "SELECT * FROM {$this->table} "
         );
         $query->execute();
         $result = $query->fetchAll();
-        $this->hydrate($result);
+        return $result;
     }
 
     /**

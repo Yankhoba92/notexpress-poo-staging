@@ -1,13 +1,15 @@
 {
-    "require": {
-        "symfony/dotenv": "^7.0",
-        "openai-php/client": "^0.8.0",
-        "symfony/http-client": "^7.0",
-        "nyholm/psr7": "^1.8"
-    },
-    "config": {
-        "allow-plugins": {
-            "php-http/discovery": true
+    "name": "yankhoba/notexpress-poo-staging",
+    "autoload": {
+        "psr-4": {
+            "Yankhoba\\NotexpressPooStaging\\": "src/"
         }
-    }
+    },
+    "authors": [
+        {
+            "name": "Yankhoba",
+            "email": "bagayoko.yan@gmail.com"
+        }
+    ],
+    "require": {}
 }
